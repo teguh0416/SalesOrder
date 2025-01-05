@@ -1,0 +1,234 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\views\\home\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:views\\home\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\models\\soorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:models\\soorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\viewmodels\\salesorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:viewmodels\\salesorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\models\\com_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:models\\com_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|d:\\lamaran kerja\\profesicipta\\profesicipta\\profesicipta\\models\\so_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B51568E-BD29-420D-A09C-1691D8CFA167}|PROFESICIPTA.csproj|solutionrelative:models\\so_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Home\\Add.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Add.cshtml",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Home\\Add.cshtml",
+              "RelativeToolTip": "Views\\Home\\Add.cshtml",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAKoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T21:50:57.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Home\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Edit.cshtml",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Home\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Home\\Edit.cshtml",
+              "ViewState": "AgIAALQAAAAAAAAAAAAqwMIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T08:08:21.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SO_ITEM.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Models\\SO_ITEM.cs",
+              "RelativeDocumentMoniker": "Models\\SO_ITEM.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Models\\SO_ITEM.cs",
+              "RelativeToolTip": "Models\\SO_ITEM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T21:06:10.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "COM_CUSTOMER.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Models\\COM_CUSTOMER.cs",
+              "RelativeDocumentMoniker": "Models\\COM_CUSTOMER.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Models\\COM_CUSTOMER.cs",
+              "RelativeToolTip": "Models\\COM_CUSTOMER.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T18:50:32.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAGEAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T18:13:12.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAAwLEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T16:46:05.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SalesOrderViewModel.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\ViewModels\\SalesOrderViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\SalesOrderViewModel.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\ViewModels\\SalesOrderViewModel.cs",
+              "RelativeToolTip": "ViewModels\\SalesOrderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T21:53:50.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T16:49:36.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAqwKMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-02T16:47:58.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwCEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T16:41:25.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SOOrder.cs",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Models\\SOOrder.cs",
+              "RelativeDocumentMoniker": "Models\\SOOrder.cs",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\Models\\SOOrder.cs",
+              "RelativeToolTip": "Models\\SOOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T16:39:37.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Lamaran Kerja\\Profesicipta\\PROFESICIPTA\\PROFESICIPTA\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-02T16:36:55.576Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

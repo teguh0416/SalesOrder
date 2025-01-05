@@ -1,0 +1,18 @@
+{
+	"searchPlaceholder": "Cari Data",
+	"sLengthMenu": "Menampilkan _MENU_ data per halaman",
+	"sZeroRecords": "Tidak ada data.",
+	"sInfo": "Menampilkan _START_ sampai _END_ baris dari total _TOTAL_ baris",
+	"sInfoEmpty": "Menampilkan 0 data",
+	"sInfoFiltered": "(Tersaring dari _MAX_ total data)",
+	"sSearch": "",
+	"sLoadingRecords": "Memuat data...",
+	"sProcessing": "Memproses data...",
+	"paginate": {
+		"previous": "Sebelumnya",
+		"next": "Berikutnya"
+	},
+	"select": {
+		"rows": "%d data dipilih"
+	}
+}

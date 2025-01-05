@@ -1,0 +1,362 @@
+﻿@model PROFESICIPTA.Models.SOOrder
+@{
+    ViewData["Title"] = "Edit";
+    var Title = (ViewBag.Mode == "Create" ? "Create" : (ViewBag.Mode == "Edit" ? "Edit" : "Detail")) + " Sales Order";
+}
+
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <div id="kt_content_container" class="container-xxl">
+            <div class="g-5 gx-xxl-8">
+                <div class="card card-xxl-stretch">
+                    <div class="card-header">
+                        <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label fw-bolder text-dark">@Title</span>
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Edit" asp-controller="Home" method="post" id="logbookForm">
+                            <input type="hidden" name="SO_ORDER_ID" value="@Model.SO_ORDER_ID" />
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <h4 class="fw-bold text-dark mb-3" align="center">Sales Order Information</h4>
+                                </div>
+                            </div><hr />
+
+                            <div class="form-group row">
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label asp-for="ORDER_NO" class="col-lg-4 col-form-label" style="font-size: 14px;">Sales Order</label>
+                                        <div class="col-lg-8">
+                                            <input asp-for="ORDER_NO" class="form-control form-control-sm" type="text" placeholder="Input Here" value="@Model.ORDER_NO" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label asp-for="ORDER_DATE" class="col-lg-4 col-form-label" style="font-size: 14px;">Order Date</label>
+                                        <div class="col-lg-8">
+                                            <input asp-for="ORDER_DATE" class="form-control form-control-sm" id="tanggalPicker" placeholder="Pick Date" type="date" value="@Model.ORDER_DATE?.ToString("yyyy-MM-dd")" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-4 col-form-label" style="font-size: 14px;">Customer</label>
+                                        <div class="col-lg-8">
+                                            <select class="form-control form-control-sm" name="COM_CUSTOMER_ID">
+                                                @if (ViewBag.CustomerList != null)
+                                                {
+                                                    var customerList = ViewBag.CustomerList as List<PROFESICIPTA.Models.COM_CUSTOMER>;
+                                                    if (customerList != null && customerList.Any())
+                                                    {
+                                                        foreach (var item in customerList)
+                                                        {
+                                                            <option value="@item.COM_CUSTOMER_ID"
+                                                                    selected="@(item.COM_CUSTOMER_ID == ViewBag.SelectedCustomerID ? "selected" : null)">
+                                                                @item.CUSTOMER_NAME
+                                                            </option>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <option disabled>No Customer available</option>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <option disabled>No Customer available</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label asp-for="ADDRESS" class="col-lg-4 col-form-label" style="font-size: 14px;">Address</label>
+                                        <div class="col-lg-8">
+                                            <textarea asp-for="ADDRESS" class="form-control form-control-sm" rows="3" placeholder="Input Here">@Model.ADDRESS</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <h4 class="fw-bold text-dark mb-3" align="center">Detail Item Information</h4>
+                                </div>
+                            </div>
+                            <hr />
+                            <button type="button" class="btn btn-primary btn-sm" onclick="addItem()"><i class="bi bi-plus-circle"></i> Add Item</button><br />
+                            <div class="form-group row">
+                                <div class="col-lg-12">
+                                    <br />
+                                    <table class="table table-sm" id="itemsTable" style="border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th style="border: 1px solid #ddd; padding: 8px;">Item Name</th>
+                                                <th style="border: 1px solid #ddd; padding: 8px;">Quantity</th>
+                                                <th style="border: 1px solid #ddd; padding: 8px;">Price</th>
+                                                <th style="border: 1px solid #ddd; padding: 8px;">Total</th>
+                                                <th style="border: 1px solid #ddd; padding: 8px;">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="itemsContainer">
+                                            @foreach (var item in Model.SOItems)
+                                            {
+                                                <tr class="item-row" id="item-@item.ItemIndex">
+                                                    <input type="hidden" name="items[@item.ItemIndex].SO_ITEM_ID" value="@item.SO_ITEM_ID" />
+
+                                                    <td>
+                                                        <input type="text"
+                                                               name="items[@item.ItemIndex].ITEM_NAME"
+                                                               placeholder="Item Name"
+                                                               class="form-control form-control-sm"
+                                                               value="@item.ITEM_NAME" />
+                                                    </td>
+
+                                                    <td>
+                                                        <input type="number"
+                                                               name="items[@item.ItemIndex].QUANTITY"
+                                                               placeholder="Quantity"
+                                                               class="form-control form-control-sm"
+                                                               value="@item.QUANTITY"
+                                                               onkeyup="updateTotals(@item.ItemIndex)" />
+                                                    </td>
+
+                                                    <td>
+                                                        <input type="number"
+                                                               name="items[@item.ItemIndex].PRICE"
+                                                               placeholder="Price"
+                                                               class="form-control form-control-sm"
+                                                               value="@item.PRICE"
+                                                               onkeyup="updateTotals(@item.ItemIndex)" />
+                                                    </td>
+
+                                                    <td id="total-@item.ItemIndex" class="text-center" style="padding: 8px;">
+                                                        @item.TOTAL
+                                                    </td>
+
+                                                    <td>
+                                                        <button type="button"
+                                                                class="btn btn-sm btn-danger"
+                                                                onclick="removeItem(@item.ItemIndex)">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="1" style="border: 1px solid #ddd; padding: 8px; text-align: right; font-weight: bold;">Total Items</td>
+                                                <td id="totalItems" style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">0</td>
+                                                <td style="border: 1px solid #ddd; padding: 8px; text-align: right; font-weight: bold;">Total Amount</td>
+                                                <td id="totalAmount" style="border: 1px solid #ddd; padding: 8px; text-align: center; font-weight: bold;">0.00</td>
+                                                <td style="border: 1px solid #ddd; padding: 8px;"></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary btn-sm" id="submitBtn">Submit</button>&nbsp;
+                                <a href="/" class="btn btn-info btn-sm">Close</a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/id.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input[name='PRICE']").each(function () {
+                let rawValue = this.value.replace(/\D/g, ''); 
+                this.value = formatNumber(parseFloat(rawValue) || 0); 
+            });
+
+            $('.selectpicker').selectpicker();
+
+            $("#tanggalPicker").flatpickr({
+                dateFormat: "Y-m-d", 
+                locale: "id"
+            });
+
+            $("#submitBtn").click(function () {
+                Swal.fire({
+                    text: "Are you sure you want to save this data?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'No'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $("#logbookForm").submit();
+                    }
+                });
+            });
+             updateTotals();
+        });
+
+        function addItem() {
+            const container = document.getElementById("itemsContainer");
+            const itemIndex = container.children.length;
+
+            const itemHtml = `
+                <tr class="item-row" id="item-${itemIndex}">
+                    <td><input type="text" name="items[${itemIndex}].ITEM_NAME" placeholder="Item Name" class="form-control form-control-sm" /></td>
+                    <td>
+                        <input type="text" name="items[${itemIndex}].QUANTITY" placeholder="Quantity"
+                               class="form-control form-control-sm"
+                               onkeyup="formatInputValue(this); updateTotals()" />
+                    </td>
+                    <td>
+                        <input type="text" name="items[${itemIndex}].PRICE" placeholder="Price"
+                               class="form-control form-control-sm"
+                               onkeyup="formatInputValue(this); updateTotals()" />
+                    </td>
+                    <td id="total-${itemIndex}" class="text-center" style="padding: 8px;">0</td>
+                    <td>
+                        <!-- Remove Button with Icon -->
+                        <button type="button" class="btn btn-sm btn-danger" onclick="removeItem(${itemIndex})">
+                            <i class="fa fa-trash"></i> <!-- Trash icon -->
+                        </button>
+
+                        <!-- Save/Edit Button with Icon -->
+                        <button type="button" class="btn btn-sm btn-success" onclick="toggleSaveEdit(${itemIndex})">
+                            <i class="fa fa-save"></i> <!-- Save icon initially -->
+                        </button>
+                    </td>
+                </tr>
+
+
+
+            `;
+            container.insertAdjacentHTML('beforeend', itemHtml);
+            updateTotals();
+        }
+
+        function removeItem(itemIndex) {
+            const row = document.getElementById(`item-${itemIndex}`);
+            row.parentNode.removeChild(row);
+            updateTotals();
+        }
+
+        function formatInputValue(element) {
+            let value = element.value.replace(/\D/g, '');  
+            element.value = formatNumber(parseFloat(value) || 0);
+        }
+
+        function updateTotals() {
+            let totalAmount = 0;
+            let totalItems = 0;
+
+            const rows = document.querySelectorAll("#itemsContainer .item-row");
+            totalItems = rows.length;
+
+            rows.forEach(row => {
+                const quantityInput = row.querySelector("input[name*='QUANTITY']");
+                const priceInput = row.querySelector("input[name*='PRICE']");
+                const totalCell = row.querySelector("td[id^='total-']");
+
+                const quantity = parseFloat(quantityInput.value.replace(/\D/g, '')) || 0;  
+                const rawPrice = priceInput.value.replace(/\D/g, '');  
+                const price = parseFloat(rawPrice) || 0;  
+
+                const rowTotal = quantity * price;
+                totalCell.textContent = formatNumber(rowTotal);  
+                totalAmount += rowTotal;
+
+                quantityInput.value = quantity;  
+                priceInput.value = rawPrice;  
+            });
+
+            document.getElementById("totalItems").textContent = totalItems;
+            document.getElementById("totalAmount").textContent = formatNumber(totalAmount);  
+        }
+
+        function formatNumber(number) {
+            if (isNaN(number)) {
+                return '';  
+            }
+
+            return number.toLocaleString('de-DE');  
+        }
+
+        function saveItem(itemIndex) {
+            const row = document.getElementById(`item-${itemIndex}`);
+
+            const itemNameInput = row.querySelector(`input[name='items[${itemIndex}].ITEM_NAME']`);
+            const quantityInput = row.querySelector(`input[name='items[${itemIndex}].QUANTITY']`);
+            const priceInput = row.querySelector(`input[name='items[${itemIndex}].PRICE']`);
+
+            const rawQuantity = quantityInput.value.replace(/\D/g, ''); 
+            const rawPrice = priceInput.value.replace(/\D/g, ''); 
+
+            const hiddenItemName = document.createElement("input");
+            hiddenItemName.type = "hidden";
+            hiddenItemName.name = `items[${itemIndex}].ITEM_NAME`;
+            hiddenItemName.value = itemNameInput.value;
+            row.appendChild(hiddenItemName);
+
+            const hiddenQuantity = document.createElement("input");
+            hiddenQuantity.type = "hidden";
+            hiddenQuantity.name = `items[${itemIndex}].QUANTITY`;
+            hiddenQuantity.value = rawQuantity; 
+            row.appendChild(hiddenQuantity);
+
+            const hiddenPrice = document.createElement("input");
+            hiddenPrice.type = "hidden";
+            hiddenPrice.name = `items[${itemIndex}].PRICE`;
+            hiddenPrice.value = rawPrice; 
+            row.appendChild(hiddenPrice);
+
+            itemNameInput.readOnly = true;
+            quantityInput.readOnly = true;
+            priceInput.readOnly = true;
+
+            const saveButton = row.querySelector("button.btn-success");
+            saveButton.textContent = "Saved";
+            saveButton.disabled = true;  
+
+            updateTotals();
+        }
+
+        function toggleSaveEdit(itemIndex) {
+            const row = document.getElementById(`item-${itemIndex}`);
+
+            const itemNameInput = row.querySelector(`input[name="items[${itemIndex}].ITEM_NAME"]`);
+            const quantityInput = row.querySelector(`input[name="items[${itemIndex}].QUANTITY"]`);
+            const priceInput = row.querySelector(`input[name="items[${itemIndex}].PRICE"]`);
+
+            const saveEditButton = row.querySelector("button.btn-success");
+
+            if (saveEditButton.innerHTML.includes('save')) {
+                saveItem(itemIndex);
+
+                saveEditButton.innerHTML = `<i class="fa fa-edit"></i>`; 
+                saveEditButton.setAttribute('onclick', `toggleSaveEdit(${itemIndex})`); 
+            } else {
+                itemNameInput.readOnly = false;
+                quantityInput.readOnly = false;
+                priceInput.readOnly = false;
+
+                saveEditButton.innerHTML = `<i class="fa fa-save"></i>`; 
+                saveEditButton.setAttribute('onclick', `toggleSaveEdit(${itemIndex})`); 
+            }
+
+            updateTotals();
+        }
+
+    </script>
+}
